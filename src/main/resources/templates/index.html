@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .profile-card {
+        background-color: white;
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px #e1e7fb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+        outline: 10px solid #ecf1ff;
+        border-radius: 50%;
+    }
+
+    .avatar>img {
+        outline: 10px #ecf1ff;
+        border-radius: 50%;
+        width: inherit;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    .salutation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .salutation>.name {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .salutation>.designation {
+        font-size: 15px;
+    }
+</style>
+<body>
+    <div class="profile-card">
+        <div class="avatar"><img src="https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=800" alt="profile-img"></div>
+        <div class="salutation">
+            <div class="name" th:text="${name}">name</div>
+            <div class="designation">Software Developer</div>
+        </div>
+        <div class="options">
+            <a href="/profile"><button class="btn btn-info">Profile</button></a>
+            <a href="/project"><button class="btn btn-info">Project</button></a>
+            <a href="/contact"><button class="btn btn-info">Contact</button></a>
+        </div>
+    </div>
+</body>
+</html>
